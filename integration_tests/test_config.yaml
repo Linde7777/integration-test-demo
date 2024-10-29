@@ -1,0 +1,12 @@
+serverAddr: localhost:8080
+
+# 是否等待前一个测试完成，如果为true，则会等待waitTimeInSeconds秒。
+# 为什么要这么做？goland不知道怎么回事，一旦Run With Coverage，
+# 测试就不通过，只有把等待时间设置为长一点的时候才能通过。
+waitForFormerTest: true
+waitTimeInSeconds: 10
+
+# 如果为true，那就不在测试里面启动Gin Server，
+# 而是需要自己在后台启动，这样子就可以打断点debug.
+# 设置为false，则会在测试里面启动Gin Server，这样才能看test coverage
+debugMode: false
